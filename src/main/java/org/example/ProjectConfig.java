@@ -10,7 +10,6 @@ import org.springframework.context.annotation.Primary;
 public class ProjectConfig {
 
     @Bean
-    @Primary
     public Book book1() {
         Book book = new Book();
         book.setTitle("1984");
@@ -18,6 +17,7 @@ public class ProjectConfig {
     }
 
     @Bean
+    @Primary
     public Book book2() {
         Book book = new Book();
         book.setTitle("Harry Potter");
@@ -29,13 +29,5 @@ public class ProjectConfig {
         Book book = new Book();
         book.setTitle("War and Peace");
         return book;
-    }
-
-    @Bean
-    public Library library() {
-        Library library = new Library();
-        library.setName("City Library");
-        library.setBook(book2());
-        return library;
     }
 }
