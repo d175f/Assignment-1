@@ -1,5 +1,8 @@
 package org.example;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Library {
     private String name;
     private Book book;
